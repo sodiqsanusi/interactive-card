@@ -17,6 +17,8 @@ aside{
   position: relative;
   padding: 1em 0 3em;
   color: #fff;
+  margin-bottom: 20%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 @mixin cards {
   width: 90%;
@@ -60,4 +62,73 @@ aside{
   text-transform: uppercase;
   font-size: .6rem;
   letter-spacing: 1.5px;
+}
+
+main{
+  padding: 0 2em;
+  margin: 0 auto;
+  label{
+    display: block;
+  }
+}
+label{
+  font-size: .8rem;
+  letter-spacing: 1.2px;
+  margin-bottom: .5em;
+}
+.input-norm{
+  outline: none;
+  font-size: 1.05rem;
+  color: #000;
+  border-radius: 8px;
+  border: solid 1px #dedddf;
+  width: 100%;
+  max-width: 300px;
+  transition: .3s;
+  padding: 1em;
+  margin-bottom: 1.5em;
+}.input-norm::placeholder{
+  color: #dedddf;
+}.input-norm:focus, .input-norm:hover{
+  border-color: #8e8593;
+}
+.exp-cvv{
+  display: flex;
+}
+.exp{
+  width: 45%;
+  max-width: 90px;
+}.exp:first-of-type{
+  margin-right: .3em;
+}
+#cvv{
+  max-width: 110px;
+}
+// Remove the increment & decrement button from the inputs
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.btn-norm{
+  width: 100%;
+  margin-bottom: 2em;
+  color: #fff;
+  background-color: hsl(278, 68%, 11%);
+  text-align: center;
+  padding: .7em 0;
+  letter-spacing: 1.2px;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: .3s;
+}.btn-norm:hover, .btn-norm:focus{
+  opacity: 80%;
+  transform: scale(0.98);
 }
