@@ -66,6 +66,7 @@ aside{
 
 main{
   padding: 0 2em;
+  margin: 0 auto;
   label{
     display: block;
   }
@@ -93,4 +94,41 @@ label{
 }
 .exp-cvv{
   display: flex;
+}
+.exp{
+  width: 45%;
+  max-width: 90px;
+}.exp:first-of-type{
+  margin-right: .3em;
+}
+#cvv{
+  max-width: 110px;
+}
+// Remove the increment & decrement button from the inputs
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.btn-norm{
+  width: 100%;
+  margin-bottom: 2em;
+  color: #fff;
+  background-color: hsl(278, 68%, 11%);
+  text-align: center;
+  padding: .7em 0;
+  letter-spacing: 1.2px;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: .3s;
+}.btn-norm:hover, .btn-norm:focus{
+  opacity: 80%;
+  transform: scale(0.98);
 }
