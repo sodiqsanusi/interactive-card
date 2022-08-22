@@ -16,6 +16,7 @@ aside{
   background-size: cover;
   position: relative;
   padding: 1em 0 3em;
+  color: #fff;
 }
 @mixin cards {
   width: 90%;
@@ -29,5 +30,34 @@ aside{
   @include cards();
   position: absolute;
   bottom: -10%;
-  left: 1em;
+  left: 5%;
+}
+.card--cvv{
+  position: absolute;
+  right: clamp(10px ,15%, 58px);
+  top: min(39%, 100px);
+  font-size: .7rem;
+  letter-spacing: .8px;
+}
+.card--details{
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+.card--logo{
+  width: 30%;
+  margin-bottom: 10%;
+}
+#card--number{
+  font-size: min(1.1rem, 6vw);
+  letter-spacing: 2px;
+  margin-bottom: 7%;
+}
+.name-exp{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: .6rem;
+  letter-spacing: 1.5px;
 }
