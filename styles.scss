@@ -1,0 +1,33 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+}
+img{
+  width: 100%;
+  object-fit: cover;
+}body{
+  display: flex;
+  flex-direction: column;
+}
+aside{
+  background: #21092f url('/images/bg-main-mobile.png') no-repeat bottom;
+  background-size: cover;
+  position: relative;
+  padding: 1em 0 3em;
+}
+@mixin cards {
+  width: 90%;
+  max-width: 280px;
+}
+.card--back{
+  @include cards();
+  margin: 1em 1em 1em auto;
+}
+.card--front{
+  @include cards();
+  position: absolute;
+  bottom: -10%;
+  left: 1em;
+}
