@@ -51,7 +51,7 @@ aside{
   margin-bottom: 10%;
 }
 #card--number{
-  font-size: min(1.1rem, 6vw);
+  font-size: min(1.1rem, 5vw);
   letter-spacing: 2px;
   margin-bottom: 7%;
 }
@@ -118,6 +118,7 @@ input[type=number] {
 }
 .btn-norm{
   width: 100%;
+  outline: none;
   margin-bottom: 2em;
   color: #fff;
   background-color: hsl(278, 68%, 11%);
@@ -131,4 +132,25 @@ input[type=number] {
 }.btn-norm:hover, .btn-norm:focus{
   opacity: 80%;
   transform: scale(0.98);
+}
+
+.icon-complete{
+  width: 40%;
+  max-width: 100px;
+  margin: 0 auto;
+  margin-bottom: 1.5em;
+}
+#completed{
+  text-align: center;
+  display: none;
+  h2{
+    letter-spacing: 3px;
+    font-weight: 500;
+    margin-bottom: .5em;
+  }
+  p{
+    color: #8e8593;
+    font-size: 1.05rem;
+    margin-bottom: 2em;
+  }
 }
