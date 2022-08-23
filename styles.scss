@@ -65,6 +65,7 @@ aside{
 }
 
 main{
+  display: flex;
   padding: 0 2em;
   margin: 0 auto;
   label{
@@ -119,6 +120,7 @@ input[type=number] {
 .btn-norm{
   width: 100%;
   outline: none;
+  border: none;
   margin-bottom: 2em;
   color: #fff;
   background-color: hsl(278, 68%, 11%);
@@ -143,6 +145,7 @@ input[type=number] {
 #completed{
   text-align: center;
   display: none;
+  flex-direction: column;
   h2{
     letter-spacing: 3px;
     font-weight: 500;
@@ -152,5 +155,53 @@ input[type=number] {
     color: #8e8593;
     font-size: 1.05rem;
     margin-bottom: 2em;
+  }
+}
+
+@media(min-width: 675px){
+  body{
+    flex-direction: row;
+  }
+  main{
+    width: 45%;
+    align-items: center;
+    justify-content: center;
+    margin: auto ;
+    min-height: 100vh;
+  }
+  aside{
+    width: 30%;
+    min-height: 100vh;
+    margin-bottom: 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 50px 0px 100px -20px, rgba(0, 0, 0, 0.3) 30px 0px 60px -30px;
+  }
+  .card--back, .card--front {
+    width: min(120%, 280px);
+  }
+  .card--back{
+    position: relative;
+    top: 48%;
+    left: clamp(40px, 30%, 200px);
+  }
+  .card--front{
+    top: 20%;
+    left: inherit;
+    right: -20%;
+    bottom: inherit;
+  }.card--cvv{
+    top: min(43%,100px);
+  }
+  .input-norm{
+    max-width: 400px;
+  }
+  #cvv{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 200px;
+  }.exp{
+    max-width: 100px;
+  }
+  #completed{
+    max-width: 450px;
   }
 }
