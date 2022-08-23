@@ -167,6 +167,12 @@ input[type=number] {
     margin-bottom: 2em;
   }
 }
+.error{
+  border-color: #ff5252;
+}
+main a{
+  width: 100%;
+}
 
 @media(min-width: 675px){
   body{

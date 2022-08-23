@@ -8,6 +8,9 @@ const inputExpMonth = document.getElementById('expiry--month');
 const cardExpMonth = document.getElementById('card--expMonth');
 const inputExpYear = document.getElementById('expiry--year')
 const cardExpYear = document.getElementById('card--expYear')
+const submitButton = document.getElementById('confirm-btn')
+const inProgressMain = document.getElementById('in-progress')
+const completedMain = document.getElementById('completed')
 
 
 
@@ -72,4 +75,47 @@ inputExpYear.addEventListener('keyup', (e) => {
   }
   final = formattedNumber(parseInt(final), 2)
   cardExpYear.textContent = final
+})
+let lilac = [0, 0, 0, 0, 0]
+submitButton.addEventListener('click', () => {
+  if(!inputName.value){
+    inputName.classList.add('error')
+    lilac[0] = 0
+  }else{
+    inputName.classList.remove('error')
+    lilac[0] = 1
+  }
+  if(!inputNumber.value){
+    inputNumber.classList.add('error')
+    lilac[1] = 0
+  }else{
+    inputNumber.classList.remove('error')
+    lilac[1] = 1
+  }
+  if(!inputExpMonth.value){
+    inputExpMonth.classList.add('error')
+    lilac[2] = 0
+  }else{
+    inputExpMonth.classList.remove('error')
+    lilac[2] = 1
+  }
+  if(!inputExpYear.value){
+    inputExpYear.classList.add('error')
+    lilac[3] = 0
+  }else{
+    inputExpYear.classList.remove('error')
+    lilac[3] = 1
+  }
+  if(!inputCVV.value){
+    inputCVV.classList.add('error')
+    lilac[4] = 0
+  }else{
+    inputCVV.classList.remove('error')
+    lilac[4] = 1
+  }
+  let result = lilac.reduce((a,b) => a + b, 0)
+  if(result == 5){
+    inProgressMain.style.display = 'none'
+    completedMain.style.display = 'flex'
+  }
 })
