@@ -56,7 +56,7 @@
           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
         </div>
       </div>
-      <input type="button" class="btn-norm" value="Confirm">
+      <input type="button" class="btn-norm" value="Confirm" id="confirm-btn">
     </form>
   </main>
 
@@ -65,7 +65,7 @@
     <div aria-hidden="true" class="icon-complete"><img src="/images/icon-complete.svg" alt=""></div>
     <h2>THANK YOU!</h2>
     <p>We've added your card details</p>
-    <button class="btn-norm">Continue</button>
+    <a href="/"><button class="btn-norm">Continue</button></a>
   </main>
   <script src="app.js"></script>
 </body>
