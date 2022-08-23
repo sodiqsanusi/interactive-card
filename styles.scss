@@ -23,6 +23,9 @@ aside{
 @mixin cards {
   width: 90%;
   max-width: 280px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
 }
 .card--back{
   @include cards();
@@ -45,6 +48,8 @@ aside{
   position: absolute;
   top: 10%;
   left: 5%;
+  width: 100%;
+  padding-right: 2em;
 }
 .card--logo{
   width: 30%;
@@ -79,6 +84,7 @@ label{
 }
 .input-norm{
   outline: none;
+  text-transform: capitalize;
   font-size: 1.05rem;
   color: #000;
   border-radius: 8px;
@@ -90,11 +96,15 @@ label{
   margin-bottom: 1.5em;
 }.input-norm::placeholder{
   color: #dedddf;
+  text-transform: none;
 }.input-norm:focus, .input-norm:hover{
   border-color: #8e8593;
 }
 .exp-cvv{
   display: flex;
+  justify-content: space-between;
+}.exp-cvv div:last-of-type{
+  width: 45%;
 }
 .exp{
   width: 45%;
@@ -195,7 +205,6 @@ input[type=number] {
     max-width: 400px;
   }
   #cvv{
-    width: 90%;
     margin: 0 auto;
     max-width: 200px;
   }.exp{

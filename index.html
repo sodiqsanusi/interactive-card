@@ -16,7 +16,7 @@
   <aside>
     <section class="card--back">
       <div class="card--cvv">
-        <p>000</p>
+        <p id="card--cvv">000</p>
       </div>
       <img src="./images/bg-card-back.png" alt="Rear view of your card">
     </section>
@@ -26,27 +26,34 @@
         <p id="card--number">0000 0000 0000 0000</p>
         <div class="name-exp">
           <p id="card--name">Jane Appleseed</p>
-          <p id="card--exp">00/00</p>
+          <p id="card--exp"><span id="card--expMonth">00</span>/<span id="card--expYear">00</span></p>
         </div>
       </div>
       <img src="./images/bg-card-front.png " alt="Front view of your card">
     </section>
   </aside>
   <main id="in-progress">
-    <form>
+    <form autocomplete="off">
       <label for="name">CARDHOLDER NAME</label> 
-      <input class="input-norm" type="text" id="name" placeholder="e.g. Jane Appleseed">
+      <input class="input-norm" type="text" id="name" placeholder="e.g. Jane Appleseed" maxlength="25" >
       <label for="number">CARD NUMBER</label>
-      <input class="input-norm" type="number" id="number" placeholder="e.g. 1234 5678 9123 0000">
+      <input class="input-norm" type="number" id="number" placeholder="e.g. 1234 5678 9123 0000" maxlength="16"
+      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+      >
       <div class="exp-cvv">
         <div>
           <label for="expiry--month">EXP. DATE (MM/YY)</label>
-          <input class="input-norm exp" type="number" id="expiry--month" placeholder="MM">
-          <input class="input-norm exp" type="number" id="expiry--year" placeholder="YY">
+          <input class="input-norm exp" type="number" id="expiry--month" placeholder="MM" maxlength="2" min="01" max="12"
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          >
+          <input class="input-norm exp" type="number" id="expiry--year" placeholder="YY" maxlength="2"
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          >
         </div>
         <div>
           <label for="cvv">CVV</label>
-          <input class="input-norm" type="number" id="cvv" placeholder="e.g. 123">
+          <input class="input-norm" type="number" id="cvv" placeholder="e.g. 123" maxlength="3"
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
         </div>
       </div>
       <input type="button" class="btn-norm" value="Confirm">
