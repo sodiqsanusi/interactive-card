@@ -80,7 +80,9 @@ main{
 label{
   font-size: .8rem;
   letter-spacing: 1.2px;
-  margin-bottom: .5em;
+  margin: 1.5em 0 .5em;
+}#outlier{
+  margin-top: 0;
 }
 .input-norm{
   outline: none;
@@ -93,7 +95,7 @@ label{
   max-width: 300px;
   transition: .3s;
   padding: 1em;
-  margin-bottom: 1.5em;
+  // margin-bottom: 1.5em;
 }.input-norm::placeholder{
   color: #dedddf;
   text-transform: none;
@@ -141,6 +143,7 @@ input[type=number] {
   font-size: 1.05rem;
   cursor: pointer;
   transition: .3s;
+  margin-top: 1.5em;
 }.btn-norm:hover, .btn-norm:focus{
   opacity: 80%;
   transform: scale(0.98);
@@ -169,6 +172,20 @@ input[type=number] {
 }
 .error{
   border-color: #ff5252;
+}.error-message{
+  color: #ff5252;
+  display: none;
+  font-size: .9rem;
+  margin-top: .3em;
+}.outlier2{
+  display: flex;
+}
+#err-expMonth, #err-expYear, #err-CVV{
+  display: none;
+  font-size: .6rem;
+}#err-expYear{
+  width: 50%;
+  margin-left: auto;
 }
 main a{
   width: 100%;

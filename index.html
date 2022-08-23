@@ -34,12 +34,14 @@
   </aside>
   <main id="in-progress">
     <form autocomplete="off">
-      <label for="name">CARDHOLDER NAME</label> 
+      <label for="name" id="outlier">CARDHOLDER NAME</label> 
       <input class="input-norm" type="text" id="name" placeholder="e.g. Jane Appleseed" maxlength="25" >
+      <span class="error-message" id="err-name"></span>
       <label for="number">CARD NUMBER</label>
       <input class="input-norm" type="number" id="number" placeholder="e.g. 1234 5678 9123 0000" maxlength="16"
       oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
       >
+      <span class="error-message" id="err-number"></span>
       <div class="exp-cvv">
         <div>
           <label for="expiry--month">EXP. DATE (MM/YY)</label>
@@ -49,11 +51,16 @@
           <input class="input-norm exp" type="number" id="expiry--year" placeholder="YY" maxlength="2"
           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
           >
+          <section class="outlier2">
+            <span class="error-message" id="err-expMonth">Can't be blank</span>
+            <span class="error-message" id="err-expYear">Can't be blank</span>
+          </section>
         </div>
         <div>
           <label for="cvv">CVV</label>
           <input class="input-norm" type="number" id="cvv" placeholder="e.g. 123" maxlength="3"
           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+          <span class="error-message" id="err-CVV"></span>
         </div>
       </div>
       <input type="button" class="btn-norm" value="Confirm" id="confirm-btn">
