@@ -31,8 +31,8 @@ Users should be able to:
 ![](./screenshot.png)
 
 ### Links
-- Solution URL: [https://github.com/sodiqsanusi/interactive-card/]()
-- Live Site URL: [https://interactives.netlify.app/]()
+- Solution URL: [https://github.com/sodiqsanusi/interactive-card/](https://github.com/sodiqsanusi/interactive-card/)
+- Live Site URL: [https://interactives.netlify.app/](https://interactives.netlify.app/)
 
 ## My process
 Heyy👋🏾👋🏾. First off, before starting this project I thought I wouldn't be able to get it done in the time I estimated for myself (2 days). Funny stuff is that I actually got it done before the end of the second day. Anyways, started out by sketching out the map of how the site will be structured, then moved on to converting the sketched out map into an HTML file. Mobile-first workflow for the styling, where I decided to use SCSS to just play around with things. I did all these in the first day. The next day was for implementing the functionalities with Javascript. That's all I guess.  
